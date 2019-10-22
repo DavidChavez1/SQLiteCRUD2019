@@ -19,9 +19,6 @@ import com.example.sqlitecrud2019.Clases.UserListAdapter;
 import com.example.sqlitecrud2019.Clases.Users;
 import com.example.sqlitecrud2019.Clases.connectionDB;
 import com.example.sqlitecrud2019.R;
-import com.example.sqlitecrud2019.classes.UserListAdapter;
-import com.example.sqlitecrud2019.classes.Users;
-import com.example.sqlitecrud2019.classes.connectionDB;
 
 import java.util.ArrayList;
 
@@ -88,7 +85,7 @@ public class UserList extends AppCompatActivity {
                 deleteUser(user_email);
                 itemList =  showAllUsers();
                 adapter.updateList(itemList);
-                Toast.makeText(this, R.string.user_was_deleted ,Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "USUARIO A ELIMINAR",Toast.LENGTH_SHORT).show();
                 return true;
             default:
                 return super.onContextItemSelected(item);
@@ -98,39 +95,38 @@ public class UserList extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
-            case R.id.men_filter:
+            case R.id.HOMBRES:
                 itemList = showOnlyMen();
                 adapter.updateList(itemList);
-                Toast.makeText(this, R.string.only_men,Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"SOLO HOMBRES",Toast.LENGTH_SHORT).show();
                 return true;
-            case R.id.women_filter:
+            case R.id.MUJERES:
                 itemList = showOnlyWomen();
                 adapter.updateList(itemList);
-                Toast.makeText(this, R.string.only_women,Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "SOLO MUJERES",Toast.LENGTH_SHORT).show();
                 return true;
-            case R.id.users_filter:
+            case R.id.USUARIOS:
                 itemList = showAllUsers();
                 adapter.updateList(itemList);
-                Toast.makeText(this, R.string.full_list,Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "TODOS LOS USUARIOS",Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.aboutof:
                 Intent aboutIntent = new Intent(getBaseContext(),AboutOf.class);
                 startActivity(aboutIntent);
                 return true;
-            case R.id.sign_out_link:
+            case R.id.CERRAR_SESION:
                 Intent myIntent = new Intent(getBaseContext(),SignIn.class);
                 startActivity(myIntent);
             default:
                 return super.onContextItemSelected(item);
-        }//switch
+        }
     }
 
     private ArrayList<Users> showAllUsers() {
         ArrayList<Users> list = new ArrayList<>();
         cursor = manager.selectUserData();
         if (cursor.getCount() == 0) {
-            Toast.makeText(this,
-                    R.string.no_users, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "NO HAY USUARIOS", Toast.LENGTH_SHORT).show();
         } else {
             while (cursor.moveToNext()) {
                 Users user = new Users(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4));
@@ -144,8 +140,7 @@ public class UserList extends AppCompatActivity {
         ArrayList<Users> list = new ArrayList<>();
         cursor = manager.getAllMen();
         if (cursor.getCount() == 0) {
-            Toast.makeText(this,
-                    R.string.no_users, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "NO HAY USUARIOS", Toast.LENGTH_SHORT).show();
         } else {
             while (cursor.moveToNext()) {
                 Users user = new Users(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4));
@@ -159,8 +154,7 @@ public class UserList extends AppCompatActivity {
         ArrayList<Users> list = new ArrayList<>();
         cursor = manager.getAllWomen();
         if (cursor.getCount() == 0) {
-            Toast.makeText(this,
-                    R.string.no_users, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "NO HAY USUARIOS", Toast.LENGTH_SHORT).show();
         } else {
             while (cursor.moveToNext()) {
                 Users user = new Users(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4));

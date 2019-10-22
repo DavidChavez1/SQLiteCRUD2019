@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+<item
+    android:id="@+id/HOMBRES"
+    android:title="HOMBRES"/>
+<item
+    android:id="@+id/MUJERES"
+    android:title="MUJERES"/>
+<item
+    android:id="@+id/USUARIOS"
+    android:title="LISTA USUARIOS"/>
+
+<item
+    android:id="@+id/aboutof"
+    android:title="ACERCA DE..."/>
+
+<item
+    android:id="@+id/CERRAR_SESION"
+    android:title="CERRAR SESION"/>
+
+</menu>
