@@ -1,8 +1,10 @@
-package com.example.sqlitecrud2019;
+package com.example.sqlitecrud2019.actividades;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.sqlitecrud2019.R;
 
 public class MainActivity extends AppCompatActivity {
 
