@@ -16,7 +16,6 @@
             android:layout_height="match_parent"
             android:layout_marginRight="6dip"
             android:contentDescription="TODO"
-            android:src="@mipmap/ic_launcher"
             app:srcCompat="@drawable/usuario"
             tools:srcCompat="@drawable/usuario" />
 

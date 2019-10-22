@@ -12,13 +12,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".actividades.SignIn" android:theme="@style/AppTheme_NoBar">
+        <activity android:name=".actividades.SignIn" android:label="@string/lbl_login" android:theme="@style/AppTheme_NoBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".actividades.UserList" android:label="@string/lbl_list_users">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".actividades.SignUp" android:theme="@style/AppTheme_NoBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".actividades.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,8 +41,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".actividades.SignUp"></activity>
-        <activity android:name=".actividades.UserList"></activity>
         <activity android:name=".actividades.AboutOf"></activity>
         <activity android:name=".actividades.Update"></activity>
 

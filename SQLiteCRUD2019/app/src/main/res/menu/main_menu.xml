@@ -3,20 +3,20 @@
 xmlns:app="http://schemas.android.com/apk/res-auto">
 <item
     android:id="@+id/HOMBRES"
-    android:title="HOMBRES"/>
+    android:title="List male users"/>
 <item
     android:id="@+id/MUJERES"
-    android:title="MUJERES"/>
+    android:title="List famela users"/>
 <item
     android:id="@+id/USUARIOS"
-    android:title="LISTA USUARIOS"/>
+    android:title="List all users"/>
 
 <item
     android:id="@+id/aboutof"
-    android:title="ACERCA DE..."/>
+    android:title="About of ..."/>
 
 <item
     android:id="@+id/CERRAR_SESION"
-    android:title="CERRAR SESION"/>
+    android:title="Sign out"/>
 
 </menu>

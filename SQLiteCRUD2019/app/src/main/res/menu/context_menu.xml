@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/EDITAR"
-        android:title="EDITAR USUARIO"/>
+        android:title="Update user"/>
     <item
         android:id="@+id/ELIMINAR"
-        android:title="ELEIMINAR USUARIO"/>
+        android:title="Delete user"/>
 </menu>

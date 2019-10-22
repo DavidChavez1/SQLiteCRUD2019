@@ -33,6 +33,7 @@ public class UserListAdapter extends ArrayAdapter<Users> {
         ImageView avatar = rowView.findViewById(R.id.list_avatar_icon);
         name.setText(itemList.get(position).firstName + " " + itemList.get(position).lastName);
         email.setText(itemList.get(position).email);
+
         return rowView;
     }
 
