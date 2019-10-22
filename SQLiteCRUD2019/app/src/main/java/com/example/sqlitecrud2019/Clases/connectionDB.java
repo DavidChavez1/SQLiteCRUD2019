@@ -44,21 +44,16 @@ public class connectionDB extends SQLiteOpenHelper {
         return rows;
     }
 
-    public Boolean checkEmailAvailability(String email){
-        SQLiteDatabase database = this.getReadableDatabase();
-        Cursor row = database.rawQuery("SELECT email FROM users WHERE email = '" + email + "'",null);
-        return row.getCount() > 0;
-    }
-
     public Boolean checkUserCredentials(String email, String password){
         SQLiteDatabase database = this.getReadableDatabase();
         Cursor row = database.rawQuery("SELECT email, password FROM users WHERE email = '" + email + "' AND password = '" + password + "'",null);
         return row.getCount() > 0;
     }
 
-    public Integer deleteUser(String user_email){
-        SQLiteDatabase database = this.getWritableDatabase();
-        return database.delete("users", "email = ?",new String[] {user_email});
+    public Boolean checkEmailAvailability(String email){
+        SQLiteDatabase database = this.getReadableDatabase();
+        Cursor row = database.rawQuery("SELECT email FROM users WHERE email = '" + email + "'",null);
+        return row.getCount() > 0;
     }
 
     public Cursor getAllMen(){
@@ -70,4 +65,10 @@ public class connectionDB extends SQLiteOpenHelper {
         SQLiteDatabase database = this.getReadableDatabase();
         return database.rawQuery("SELECT * FROM users WHERE gender ='Female'",null);
     }
+
+    public Integer deleteUser(String user_email){
+        SQLiteDatabase database = this.getWritableDatabase();
+        return database.delete("users", "email = ?",new String[] {user_email});
+    }
+
 }
