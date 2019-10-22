@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SignIn">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="48dp"
+                android:src="@mipmap/ic_avatar_foreground" />
+
+            <TextView
+                android:id="@+id/user_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/e_mail"
+                android:textSize="18sp"
+                android:textAlignment="center"/>
+
+            <EditText
+                android:id="@+id/sign_in_email_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:hint="@string/user_mail"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/pass_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/password"
+                android:textSize="18sp"
+                android:textAlignment="center"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleContentDescription="@string/password"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="#B93D3C3C">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/sign_in_password_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="@string/password"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/signInButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#FF9800"
+                android:onClick="checkCredentials"
+                android:text="@string/sign_in"
+                app:backgroundTint="#009688" />
+
+            <Button
+                android:id="@+id/signUpButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#3F51B5"
+                android:onClick="signUp"
+                android:text="@string/sign_up"
+                app:backgroundTint="#F44336" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/facebookIcon"
+                    android:layout_width="64dip"
+                    android:layout_height="64dip"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:contentDescription="@string/user_profile_pic"
+                    android:src="@drawable/ic_icons8_facebook" />
+
+                <ImageView
+                    android:id="@+id/linkedInIcon"
+                    android:layout_width="64dip"
+                    android:layout_height="64dip"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:contentDescription="@string/user_profile_pic"
+                    android:src="@drawable/ic_icons8_play_button" />
+
+                <ImageView
+                    android:id="@+id/twitterIcon"
+                    android:layout_width="64dip"
+                    android:layout_height="64dip"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:contentDescription="@string/user_profile_pic"
+                    android:src="@drawable/ic_icons8_twitter" />
+
+                <ImageView
+                    android:id="@+id/instagramIcon"
+                    android:layout_width="64dip"
+                    android:layout_height="64dip"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:contentDescription="@string/user_profile_pic"
+                    android:src="@drawable/ic_icons8_instagram" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
