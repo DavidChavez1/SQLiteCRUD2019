@@ -48,7 +48,7 @@ public class SignUp extends AppCompatActivity {
                         if(CONFIRM.equals(PASSORWD)){
                             //Validation: Don't repeat email if exists.
                             if(manager.checkEmailAvailability(EMAIL)) {
-                                Toast.makeText(this, "El usuario ya existe", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(this, "User already exists", Toast.LENGTH_SHORT).show();
                             }else {
                                 ContentValues DATA = new ContentValues();
                                 DATA.put("firstname", FNAME);
@@ -62,43 +62,43 @@ public class SignUp extends AppCompatActivity {
                                 confirm.setText("");
                                 database.insert("users", null, DATA);
                                 database.close();
-                                Toast.makeText(this,"usuario creado", Toast.LENGTH_LONG).show();
+                                Toast.makeText(this,"The user was created", Toast.LENGTH_LONG).show();
                                 Intent myIntent = new Intent(getBaseContext(),SignIn.class);
                                 startActivity(myIntent);
                             }
                         }else{
-                            confirm.setError("password error");
-                            Toast.makeText(this, "password error", Toast.LENGTH_SHORT).show();
+                            confirm.setError("Invalid password");
+                            Toast.makeText(this, "Invalid password", Toast.LENGTH_SHORT).show();
                         }
                     }else{
-                        Email.setError("email incorrecto");
-                        Toast.makeText(this, "email incorrecto", Toast.LENGTH_SHORT).show();
+                        Email.setError("Invalid email");
+                        Toast.makeText(this, "Invalid email", Toast.LENGTH_SHORT).show();
                     }
                 }else{
-                    Lname.setError("Apellido incorrecto");
-                    Toast.makeText(this, "Apellido icorrecto", Toast.LENGTH_SHORT).show();
+                    Lname.setError("Invalid lastname");
+                    Toast.makeText(this, "Invalid lastname", Toast.LENGTH_SHORT).show();
                 }
             }else{
-                Fname.setError("Nombre incorrecto");
-                Toast.makeText(this, "nombre incorrecto", Toast.LENGTH_SHORT).show();
+                Fname.setError("Invalid firstname");
+                Toast.makeText(this, "Invalid firstname", Toast.LENGTH_SHORT).show();
             }
         }else{
             if(FNAME.isEmpty()){
-                Fname.setError("Nombre invalido");
+                Fname.setError("Invalid firstname");
             }
             if (LNAME.isEmpty()){
-                Lname.setError("Apellido invalido");
+                Lname.setError("Invalid lastname");
             }
             if(EMAIL.isEmpty()){
-                Email.setError("Email invalido");
+                Email.setError("Invalid email");
             }
             if(PASSORWD.isEmpty()){
-                pwd.setError("Password invalido");
+                pwd.setError("Invalid password");
             }
             if(CONFIRM.isEmpty()){
-                confirm.setError("No debe estar vacio");
+                confirm.setError("The field must not be empty");
             }
-            Toast.makeText(this,"Campos vacios", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Empty fields", Toast.LENGTH_SHORT).show();
         }
     }
 

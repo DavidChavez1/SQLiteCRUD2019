@@ -64,7 +64,7 @@ public class UserList extends AppCompatActivity {
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
-        menu.setHeaderTitle("Selecccione");
+        menu.setHeaderTitle("Select option");
         getMenuInflater().inflate(R.menu.context_menu,menu);
     }
 
@@ -72,7 +72,7 @@ public class UserList extends AppCompatActivity {
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
-        String user_email = ((TextView)info.targetView.findViewById(R.id.list_email)).getText().toString();
+        String user_email = ((TextView)info.targetView.findViewById(R.id.showEmail)).getText().toString();
 
         switch (item.getItemId()){
             case R.id.EDITAR:
@@ -85,7 +85,7 @@ public class UserList extends AppCompatActivity {
                 deleteUser(user_email);
                 itemList =  showAllUsers();
                 adapter.updateList(itemList);
-                Toast.makeText(this, "USUARIO A ELIMINAR",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Delete user",Toast.LENGTH_SHORT).show();
                 return true;
             default:
                 return super.onContextItemSelected(item);
@@ -98,17 +98,17 @@ public class UserList extends AppCompatActivity {
             case R.id.HOMBRES:
                 itemList = showOnlyMen();
                 adapter.updateList(itemList);
-                Toast.makeText(this,"SOLO HOMBRES",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"See only men",Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.MUJERES:
                 itemList = showOnlyWomen();
                 adapter.updateList(itemList);
-                Toast.makeText(this, "SOLO MUJERES",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "See only women",Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.USUARIOS:
                 itemList = showAllUsers();
                 adapter.updateList(itemList);
-                Toast.makeText(this, "TODOS LOS USUARIOS",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "All users",Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.aboutof:
                 Intent aboutIntent = new Intent(getBaseContext(),AboutOf.class);
@@ -126,7 +126,7 @@ public class UserList extends AppCompatActivity {
         ArrayList<Users> list = new ArrayList<>();
         cursor = manager.selectUserData();
         if (cursor.getCount() == 0) {
-            Toast.makeText(this, "NO HAY USUARIOS", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "There are not users", Toast.LENGTH_SHORT).show();
         } else {
             while (cursor.moveToNext()) {
                 Users user = new Users(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4));
@@ -140,7 +140,7 @@ public class UserList extends AppCompatActivity {
         ArrayList<Users> list = new ArrayList<>();
         cursor = manager.getAllMen();
         if (cursor.getCount() == 0) {
-            Toast.makeText(this, "NO HAY USUARIOS", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "There are not users", Toast.LENGTH_SHORT).show();
         } else {
             while (cursor.moveToNext()) {
                 Users user = new Users(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4));
@@ -154,7 +154,7 @@ public class UserList extends AppCompatActivity {
         ArrayList<Users> list = new ArrayList<>();
         cursor = manager.getAllWomen();
         if (cursor.getCount() == 0) {
-            Toast.makeText(this, "NO HAY USUARIOS", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "There are not users", Toast.LENGTH_SHORT).show();
         } else {
             while (cursor.moveToNext()) {
                 Users user = new Users(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4));

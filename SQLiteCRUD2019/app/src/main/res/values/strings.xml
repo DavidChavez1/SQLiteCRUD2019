@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">SQLiteCRUD2019</string>
     <string name="password">Password</string>
+    <string name="delete_user">Delete user</string>
+    <string name="email">Email</string>
+    <string name="firstname">First name</string>
+    <string name="lastname">Last name</string>
+    <string name="lbl_list_users">List user</string>
+    <string name="lbl_login">Login</string>
+    <string name="signin">Sign in</string>
+    <string name="signout">Sign out</string>
+    <string name="signup">Register</string>
+    <string name="update_user">Update user</string>
+    <string name="username">Username</string>
+    <string name="confirm_password">Confirm pasword</string>
+    <string name="register">Register</string>
 </resources>

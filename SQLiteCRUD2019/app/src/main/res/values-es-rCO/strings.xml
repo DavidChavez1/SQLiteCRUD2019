@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">SQLiteCRUD2019</string>
+    <string name="app_name">Taller2</string>
+    <string name="lbl_login">Login</string>
+    <string name="lbl_list_users">Lista de usuarios</string>
     <string name="password">Contraseña</string>
+    <string name="confirm_password">Confirmar contraseña</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="email">Correo electronico</string>
+    <string name="signin">Ingresar</string>
+    <string name="signup">Registrarse</string>
+    <string name="firstname">Nombre</string>
+    <string name="lastname">Apellido</string>
+    <string name="update_user">Actualizar usuario</string>
+    <string name="delete_user">Eliminar usuario</string>
+    <string name="signout">Cerrar sesion</string>
+    <string name="register">Registrar</string>
 </resources>

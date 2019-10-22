@@ -1,40 +1,50 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="?android:attr/listPreferredItemHeight"
     android:padding="6dip" >
 
-    <ImageView
-        android:id="@+id/list_avatar_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="6dip"
-        android:contentDescription="TODO"
-        android:src="@mipmap/ic_launcher" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/list_name"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignWithParentIfMissing="true"
-        android:layout_above="@id/list_email"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@id/list_avatar_icon"
-        android:gravity="center_vertical"
-        android:text="Andrés Piarpusan"
-        android:textSize="18sp" />
+        <ImageView
+            android:id="@+id/list_avatar_icon"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="6dip"
+            android:contentDescription="TODO"
+            android:src="@mipmap/ic_launcher"
+            app:srcCompat="@drawable/usuario"
+            tools:srcCompat="@drawable/usuario" />
 
-    <TextView
-        android:id="@+id/list_email"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@id/list_avatar_icon"
-        android:ellipsize="marquee"
-        android:text="andrespiarpu@gmail.com"
-        android:textSize="14sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/showName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignWithParentIfMissing="true"
+                android:gravity="center_vertical"
+                android:text="Username"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/showEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:text="Email"
+                android:textColor="#a9a9a9"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>

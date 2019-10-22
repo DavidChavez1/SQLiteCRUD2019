@@ -28,8 +28,8 @@ public class UserListAdapter extends ArrayAdapter<Users> {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView = inflater.inflate(R.layout.list, parent, false);
-        TextView name = rowView.findViewById(R.id.list_name);
-        TextView email = rowView.findViewById(R.id.list_email);
+        TextView name = rowView.findViewById(R.id.showName);
+        TextView email = rowView.findViewById(R.id.showEmail);
         ImageView avatar = rowView.findViewById(R.id.list_avatar_icon);
         name.setText(itemList.get(position).firstName + " " + itemList.get(position).lastName);
         email.setText(itemList.get(position).email);

@@ -14,7 +14,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:layout_marginTop="50dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                app:srcCompat="@drawable/usuario"
+                android:layout_gravity="center"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -38,11 +46,9 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="20dp"
                 android:ems="10"
-                android:hint="user@yopmail.com"
+                android:hint="user@mail.com"
                 android:importantForAutofill="no"
-                android:inputType="textEmailAddress"
-
-                android:textAlignment="center"/>
+                android:inputType="textEmailAddress" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -69,7 +75,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:hint="PASSWORD"
+                    android:hint="Password"
                     android:inputType="textPassword" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -87,7 +93,7 @@
                 android:background="#FF9800"
                 android:onClick="checkCredentials"
                 android:text="SIGN IN"
-                app:backgroundTint="#009688" />
+                app:backgroundTint="@color/colorBtnSignin" />
 
             <Button
                 android:id="@+id/btnSignUp"
@@ -101,7 +107,7 @@
                 android:background="#3F51B5"
                 android:onClick="signUp"
                 android:text="SIGN UP"
-                app:backgroundTint="#F44336" />
+                android:backgroundTint="@color/colorBtnSignup" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -119,7 +125,8 @@
                     android:layout_marginLeft="12dp"
                     android:layout_marginRight="12dp"
                     android:contentDescription="IMAGEN DE PERFIL"
-                    android:src="@drawable/ic_icons8_facebook" />
+                    app:srcCompat="@drawable/facebook"
+                    tools:srcCompat="@drawable/facebook" />
 
                 <ImageView
                     android:id="@+id/linkedInIcon"
@@ -128,7 +135,8 @@
                     android:layout_marginLeft="12dp"
                     android:layout_marginRight="12dp"
                     android:contentDescription="IMAGEN DE USUARIO"
-                    android:src="@drawable/ic_icons8_play_button" />
+                    app:srcCompat="@drawable/gorjeo"
+                    tools:srcCompat="@drawable/gorjeo" />
 
                 <ImageView
                     android:id="@+id/twitterIcon"
@@ -137,7 +145,8 @@
                     android:layout_marginLeft="12dp"
                     android:layout_marginRight="12dp"
                     android:contentDescription="IMAGEN DE USUARIO"
-                    android:src="@drawable/ic_icons8_twitter" />
+                    app:srcCompat="@drawable/linkedin"
+                    tools:srcCompat="@drawable/linkedin" />
 
                 <ImageView
                     android:id="@+id/instagramIcon"
@@ -146,7 +155,8 @@
                     android:layout_marginLeft="12dp"
                     android:layout_marginRight="12dp"
                     android:contentDescription="IMAGEN DE USUARIO"
-                    android:src="@drawable/ic_icons8_instagram" />
+                    app:srcCompat="@drawable/busqueda"
+                    tools:srcCompat="@drawable/busqueda" />
 
 
             </LinearLayout>

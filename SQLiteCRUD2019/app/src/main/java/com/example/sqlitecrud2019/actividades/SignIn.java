@@ -33,25 +33,25 @@ public class SignIn extends AppCompatActivity {
         if(!EMAIL.isEmpty() && !PASSWORD.isEmpty()){
             if(EMAIL.trim().matches(emailPattern)){
                 if(manager.checkUserCredentials(EMAIL, PASSWORD)){
-                    Toast.makeText(this, "inicio sesión", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Starting session", Toast.LENGTH_SHORT).show();
                     Intent myIntent = new Intent(getBaseContext(),UserList.class);
                     startActivity(myIntent);
                 }else{
-                    Toast.makeText(this, "datos invlidos", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Invalid data", Toast.LENGTH_SHORT).show();
                 }
             }else{
-                email.setError("Email incorrecto");
-                Toast.makeText(this, "Email incorrecto", Toast.LENGTH_SHORT).show();
+                email.setError("Invalid email");
+                Toast.makeText(this, "Invalid email", Toast.LENGTH_SHORT).show();
             }
 
         }else{
             if(EMAIL.isEmpty()){
-                email.setError("Campo vacio");
+                email.setError("Field empty");
             }
             if(PASSWORD.isEmpty()){
-                pwd.setError("Campo vacio");
+                pwd.setError("Field empty");
             }
-            Toast.makeText(this, "Los campos estan vacios", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "The fields are empty", Toast.LENGTH_SHORT).show();
 
         }
     }
