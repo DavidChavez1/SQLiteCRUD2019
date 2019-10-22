@@ -75,13 +75,13 @@ public class UserList extends AppCompatActivity {
         String user_email = ((TextView)info.targetView.findViewById(R.id.list_email)).getText().toString();
 
         switch (item.getItemId()){
-            case R.id.update_item:
+            case R.id.EDITAR:
                 Toast.makeText(this,user_email,Toast.LENGTH_SHORT).show();
                 Intent myIntent = new Intent(getBaseContext(),Update.class);
                 myIntent.putExtra("email", user_email);
                 startActivity(myIntent);
                 return true;
-            case R.id.delete_item:
+            case R.id.ELIMINAR:
                 deleteUser(user_email);
                 itemList =  showAllUsers();
                 adapter.updateList(itemList);

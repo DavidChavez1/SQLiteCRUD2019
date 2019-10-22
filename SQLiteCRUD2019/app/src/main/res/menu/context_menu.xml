@@ -2,9 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/update_item"
+        android:id="@+id/EDITAR"
         android:title="EDITAR USUARIO"/>
     <item
-        android:id="@+id/delete_item"
+        android:id="@+id/ELIMINAR"
         android:title="ELEIMINAR USUARIO"/>
 </menu>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SignIn">
+    tools:context=".actividades.SignIn">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -21,7 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginTop="48dp"
-                android:src="@mipmap/ic_avatar_foreground" />
+                android:src="@drawable/ic_avatar_background" />
 
             <TextView
                 android:id="@+id/user_label"
@@ -32,7 +32,7 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="20dp"
-                android:text="@string/e_mail"
+                android:text="EMAIL"
                 android:textSize="18sp"
                 android:textAlignment="center"/>
 
@@ -46,7 +46,7 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="20dp"
                 android:ems="10"
-                android:hint="@string/user_mail"
+                android:hint="user@yopmail.com"
                 android:importantForAutofill="no"
                 android:inputType="textEmailAddress"
 
@@ -61,7 +61,7 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="20dp"
-                android:text="@string/password"
+                android:text="PASSWORD"
                 android:textSize="18sp"
                 android:textAlignment="center"/>
 
@@ -78,7 +78,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:hint="@string/password"
+                    android:hint="PASSWORD"
                     android:inputType="textPassword" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -95,7 +95,7 @@
                 android:layout_marginBottom="20dp"
                 android:background="#FF9800"
                 android:onClick="checkCredentials"
-                android:text="@string/sign_in"
+                android:text="SIGN IN"
                 app:backgroundTint="#009688" />
 
             <Button
@@ -109,7 +109,7 @@
                 android:layout_marginBottom="20dp"
                 android:background="#3F51B5"
                 android:onClick="signUp"
-                android:text="@string/sign_up"
+                android:text="SIGN UP"
                 app:backgroundTint="#F44336" />
 
             <LinearLayout
@@ -127,7 +127,7 @@
                     android:layout_height="64dip"
                     android:layout_marginLeft="12dp"
                     android:layout_marginRight="12dp"
-                    android:contentDescription="@string/user_profile_pic"
+                    android:contentDescription="IMAGEN DE PERFIL"
                     android:src="@drawable/ic_icons8_facebook" />
 
                 <ImageView
@@ -136,7 +136,7 @@
                     android:layout_height="64dip"
                     android:layout_marginLeft="12dp"
                     android:layout_marginRight="12dp"
-                    android:contentDescription="@string/user_profile_pic"
+                    android:contentDescription="IMAGEN DE USUARIO"
                     android:src="@drawable/ic_icons8_play_button" />
 
                 <ImageView
@@ -145,7 +145,7 @@
                     android:layout_height="64dip"
                     android:layout_marginLeft="12dp"
                     android:layout_marginRight="12dp"
-                    android:contentDescription="@string/user_profile_pic"
+                    android:contentDescription="IMAGEN DE USUARIO"
                     android:src="@drawable/ic_icons8_twitter" />
 
                 <ImageView
@@ -154,7 +154,7 @@
                     android:layout_height="64dip"
                     android:layout_marginLeft="12dp"
                     android:layout_marginRight="12dp"
-                    android:contentDescription="@string/user_profile_pic"
+                    android:contentDescription="IMAGEN DE USUARIO"
                     android:src="@drawable/ic_icons8_instagram" />
 
 
