@@ -15,8 +15,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.sqlitecrud2019.Clases.connectionDB;
 import com.example.sqlitecrud2019.R;
-import com.example.sqlitecrud2019.classes.connectionDB;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -98,7 +98,7 @@ public class Update extends AppCompatActivity {
         Cursor cursor = manager.updateUserData(mail);
 
         if(cursor.getCount() == 0){
-            Toast.makeText(this, R.string.no_users, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "No hay usuarios", Toast.LENGTH_SHORT).show();
         } else {
             while (cursor.moveToNext()){
                 fname.setText(cursor.getString(1));
@@ -148,7 +148,7 @@ public class Update extends AppCompatActivity {
             Intent myIntent = new Intent(getBaseContext(),UserList.class);
             startActivity(myIntent);
         }else{
-            Toast.makeText(this, R.string.invalid_field_message, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Campos vacios", Toast.LENGTH_SHORT).show();
         }
 
     }

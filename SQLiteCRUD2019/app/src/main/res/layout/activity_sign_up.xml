@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".SignUp">
+        tools:context="actividades.SignUp">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -28,7 +28,7 @@
                         android:id="@+id/textView3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/firstname"
+                        android:text="PRIMER NOMBRE"
                         android:textSize="18sp" />
 
                     <EditText
@@ -40,7 +40,7 @@
                         android:layout_marginEnd="20dp"
                         android:layout_marginRight="20dp"
                         android:ems="10"
-                        android:hint="@string/your_first_name"
+                        android:hint="PEPITO"
                         android:importantForAutofill="no"
                         android:inputType="textPersonName" />
                 </LinearLayout>
@@ -55,7 +55,7 @@
                         android:id="@+id/textView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/lastname"
+                        android:text="APELLIDO"
                         android:textSize="18sp" />
 
                     <EditText
@@ -67,7 +67,7 @@
                         android:layout_marginEnd="20dp"
                         android:layout_marginRight="20dp"
                         android:ems="10"
-                        android:hint="@string/your_lastname"
+                        android:hint="PEREZ"
                         android:importantForAutofill="no"
                         android:inputType="textPersonName" />
                 </LinearLayout>
@@ -82,7 +82,7 @@
                         android:id="@+id/textView5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/e_mail"
+                        android:text="EMAIL"
                         android:textSize="18sp" />
 
                     <EditText
@@ -94,7 +94,7 @@
                         android:layout_marginEnd="20dp"
                         android:layout_marginRight="20dp"
                         android:ems="10"
-                        android:hint="@string/user_mail"
+                        android:hint="user@yopmail.com"
                         android:importantForAutofill="no"
                         android:inputType="textEmailAddress" />
                 </LinearLayout>
@@ -109,7 +109,7 @@
                         android:id="@+id/textView6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/password"
+                        android:text="PASSWORD"
                         android:textSize="18sp" />
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -117,7 +117,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        app:passwordToggleContentDescription="@string/your_password"
+                        app:passwordToggleContentDescription="PASSWORD"
                         app:passwordToggleEnabled="true"
                         app:passwordToggleTint="#4B4949">
 
@@ -129,7 +129,7 @@
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
                             android:layout_marginRight="20dp"
-                            android:hint="@string/your_password"
+                            android:hint="PASSWORD"
                             android:inputType="textPassword" />
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
@@ -144,13 +144,13 @@
                         android:id="@+id/textView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/confirm"
+                        android:text="COMFIRMAR"
                         android:textSize="18sp" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:passwordToggleContentDescription="@string/confirm_password"
+                        app:passwordToggleContentDescription="CONFIRMA TU PASSWORD"
                         app:passwordToggleEnabled="true"
                         app:passwordToggleTint="#4B4949">
 
@@ -160,7 +160,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
                             android:layout_marginRight="20dp"
-                            android:hint="@string/confirm_password"
+                            android:hint="@CONFIRMAR PASSWORD"
                             android:inputType="textPassword" />
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
@@ -177,7 +177,7 @@
                     android:layout_marginBottom="24dp"
                     android:background="#009688"
                     android:onClick="Register"
-                    android:text="@string/register" />
+                    android:text="REGITRAR" />
 
             </LinearLayout>
         </ScrollView>

@@ -8,51 +8,50 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.sqlitecrud2019.Clases.connectionDB;
 import com.example.sqlitecrud2019.R;
-import com.example.sqlitecrud2019.classes.connectionDB;
 
 public class SignIn extends AppCompatActivity {
 
-    EditText email, pass;
+    EditText email, pwd;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-    String namePattern = "[A-Z][a-z]+( [A-Z][a-z]+)*";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
-        email = findViewById(R.id.sign_in_email_field);
-        pass = findViewById(R.id.sign_in_password_field);
+        email = findViewById(R.id.txtEmailUsuario);
+        pwd = findViewById(R.id.txtpasswordusuario);
     }
 
     public void checkCredentials(View view){
         connectionDB manager = new connectionDB(this, "bd", null, 1);
 
         String EMAIL = email.getText().toString();
-        String PASSWORD = pass.getText().toString();
+        String PASSWORD = pwd.getText().toString();
 
         if(!EMAIL.isEmpty() && !PASSWORD.isEmpty()){
             if(EMAIL.trim().matches(emailPattern)){
                 if(manager.checkUserCredentials(EMAIL, PASSWORD)){
-                    Toast.makeText(this, R.string.signed_in, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "inicio sesión", Toast.LENGTH_SHORT).show();
                     Intent myIntent = new Intent(getBaseContext(),UserList.class);
                     startActivity(myIntent);
                 }else{
-                    Toast.makeText(this, R.string.credentials_incorrect, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "datos invlidos", Toast.LENGTH_SHORT).show();
                 }
             }else{
-                email.setError(getString(R.string.invalid_email));
-                Toast.makeText(this, R.string.invalid_email, Toast.LENGTH_SHORT).show();
+                email.setError("Email incorrecto");
+                Toast.makeText(this, "Email incorrecto", Toast.LENGTH_SHORT).show();
             }
 
         }else{
             if(EMAIL.isEmpty()){
-                email.setError(getString(R.string.invalid_field_message));
+                email.setError("Campo vacio");
             }
             if(PASSWORD.isEmpty()){
-                pass.setError(getString(R.string.invalid_field_message));
+                pwd.setError("Campo vacio");
             }
-            Toast.makeText(this, R.string.empty_fields_message, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Los campos estan vacios", Toast.LENGTH_SHORT).show();
 
         }
     }
