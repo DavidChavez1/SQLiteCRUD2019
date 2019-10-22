@@ -71,7 +71,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="5dp">
 
                 <TextView
                     android:id="@+id/textView8"
@@ -128,7 +129,7 @@
                     android:id="@+id/textView11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="" />
+                    android:text="PAIS" />
 
                 <Spinner
                     android:id="@+id/spPais"
@@ -184,7 +185,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginRight="20dp"
-                    android:hint="316534232r"
+                    android:hint="316534232"
                     android:inputType="number" />
             </LinearLayout>
 
